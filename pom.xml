@@ -35,7 +35,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>commons.lang3</groupId>
+            <artifactId>commons.lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
