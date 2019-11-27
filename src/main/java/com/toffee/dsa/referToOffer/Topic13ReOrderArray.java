@@ -13,7 +13,7 @@ public class Topic13ReOrderArray {
     public static void main(String[] args) {
         int[] array = {1, 2,3, 4, 5, 6, 7, 8, 9, 10};
         //int[] array = {1};
-        reOrderArray(array);
+        reOrderArrayInsert(array);
         for (int i : array) {
             System.out.println(i);
         }
@@ -40,6 +40,33 @@ public class Topic13ReOrderArray {
         }
         System.arraycopy(oddArray, 0, array, 0, oddIndex);
         System.arraycopy(evenArray, 0, array, oddIndex, evenIndex);
+
+    }
+
+    /**
+     * 思路 采用插入排序的思想 所有偶数后移，奇数插入到奇数和偶数中间的位置
+     * @param array
+     */
+    public static void reOrderArrayInsert(int[] array) {
+        if (null == array || array.length == 0) {
+            return;
+        }
+        int length = array.length;
+        int valueBak = 0;
+        int oddNum = array[0]&1;//奇数数量
+        for (int i = 1; i < length; i++) {
+            //奇数情况 插入到奇数和偶数中间
+            if ((array[i] & 1) == 1) {
+                valueBak = array[i];//备份当前奇数
+
+                //所有偶数后移
+                for (int j = i; j > oddNum; j-- ) {
+                    array[j] = array[j - 1];
+                }
+                array[oddNum] = valueBak;//设置当前奇数
+                ++oddNum;//奇数数目加1
+            }
+        }
 
     }
 
