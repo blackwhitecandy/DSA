@@ -70,4 +70,22 @@ public class Topic15ReverseList {
         return listNode;
 
     }
+
+    /** https://www.nowcoder.com/questionTerminal/75e878df47f24fdc9dc3e400ec6058ca?f=discussion
+     * 来源 牛客网
+     * nice code
+     * @param head
+     * @return
+     */
+    public ListNode reverseListNice(ListNode head) {
+        ListNode pre = null;
+        ListNode next = null;
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        return pre;
+    }
 }
