@@ -3,7 +3,7 @@ package com.toffee.dsa.referToOffer;
 /**
  * @Author: glz
  * @Description: 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
- * @Date: Create in 11:13 2019/11/28
+ * @Date: Create in  2019/11/28
  */
 public class Topic16MergeList {
 

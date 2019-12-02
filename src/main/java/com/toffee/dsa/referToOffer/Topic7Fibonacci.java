@@ -6,7 +6,7 @@ package com.toffee.dsa.referToOffer;
  *
  * n<=39
  * 考察递归的知识，可以递归调用函数 或者 循环累加来实现
- * @ Date 2019-11-24 下午8:31
+ * @ Date 2019-11-24
  */
 public class Topic7Fibonacci {
     public static void main (String[] args) {

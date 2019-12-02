@@ -4,7 +4,7 @@ package com.toffee.dsa.referToOffer;
  * @Author glz
  * @Description 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。保证base和exponent不同时为0
  * 考察知识点 数学以及代码完整性; 思路 ： for循环 相乘  注意0值的判断
- * @ Date 2019-11-26 下午10:04
+ * @ Date 2019-11-26
  */
 public class Topic12Power {
     public static void main (String[] args) {

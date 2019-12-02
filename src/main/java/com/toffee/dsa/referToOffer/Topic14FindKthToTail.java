@@ -3,7 +3,7 @@ package com.toffee.dsa.referToOffer;
 /**
  * @Author: glz
  * @Description: 输入一个链表，输出该链表中倒数第k个结点。
- * @Date: Create in 10:28 2019/11/27
+ * @Date: Create in  2019/11/27
  */
 public class Topic14FindKthToTail {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package com.toffee.dsa.referToOffer;
 /**
  * @Author glz
  * @Description
- * @ Date 2019-12-01 下午5:47
+ * @ Date 2019-12-01
  */
 public class OfferTest {
     public static void main (String[] args) {

@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * @Auther glz
  * @Description 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型
- * @ Date 2019-11-24 下午3:40
+ * @ Date 2019-11-24
  */
 public class Topic5DealQueueByStack {
     private static Stack<Integer> stack1 = new Stack<Integer>();

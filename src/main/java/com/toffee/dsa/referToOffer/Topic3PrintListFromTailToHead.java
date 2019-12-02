@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: glz
  * @Description: 输入一个链表，按链表从尾到头的顺序返回一个ArrayList
- * @Date: Create in 9:01 2019/11/21
+ * @Date: Create in 2019/11/21
  */
 public class Topic3PrintListFromTailToHead {
     public static void main (String[] args){

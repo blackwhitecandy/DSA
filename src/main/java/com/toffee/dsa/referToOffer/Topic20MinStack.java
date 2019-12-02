@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * 数组实现栈需要涉及到扩容的操作 有点麻烦
  * 链表实现比较简单
  * 获取栈中最小元素的时间复杂度是O(1)  所以 必须保存有最小值 而且实时更新
- * @ Date 2019-12-01 下午4:04
+ * @ Date 2019-12-01
  */
 public class Topic20MinStack {
     /**

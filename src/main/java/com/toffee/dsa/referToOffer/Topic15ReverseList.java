@@ -3,7 +3,7 @@ package com.toffee.dsa.referToOffer;
 /**
  * @Author glz
  * @Description 输入一个链表，反转链表后，输出新链表的表头。
- * @ Date 2019-11-27 下午9:36
+ * @ Date 2019-11-27
  */
 public class Topic15ReverseList {
 

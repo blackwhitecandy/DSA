@@ -3,7 +3,7 @@ package com.toffee.dsa.referToOffer;
 /**
  * @Author: glz
  * @Description: 将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
- * @Date: Create in 16:07 2019/11/20
+ * @Date: Create in  2019/11/20
  */
 public class Topic2ReplaceSpace {
     public static void main (String[] args) {
