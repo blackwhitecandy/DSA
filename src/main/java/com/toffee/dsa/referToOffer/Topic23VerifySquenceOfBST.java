@@ -13,7 +13,8 @@ import java.util.Arrays;
 public class Topic23VerifySquenceOfBST {
     public static void main ( String[] args) {
         int[] sequence = {6,5,4,7};
-        System.out.println(verifySquenceOfBST(sequence));
+//        System.out.println(verifySquenceOfBST(sequence));
+        System.out.println("33".compareTo("22"));
     }
     public static boolean verifySquenceOfBST (int[] sequence) {
         if (sequence == null || sequence.length == 0) {
