@@ -77,7 +77,7 @@ public class Topic38TreeDepthTest {
         treeNode9.right = treeNode10;
 
         Topic38TreeDepth test = new Topic38TreeDepth();
-        System.out.println(test.treeDepthByArray(treeNode6));
+        System.out.println(test.treeDepthByRecursive(treeNode6));
     } 
 
 
