@@ -16,27 +16,27 @@ public class Topic51StrMatch {
      * @return
      */
     public boolean match (char[] str, char[] pattern) {
-        if (str == null || pattern == null) {
-            return false;
-        }
-        int i = 0;
-        int j = 0;
-
-        while (i < str.length && j < pattern.length) {
-            if (str[i] == pattern[j]) {
-                i++;
-                if () {
-
-                }
-            } else if (pattern[j] == '.') {
-                //如果是.*的组合 直接返回true
-                if (j + 1 < pattern.length && pattern[j + 1] == '*') {
-                    return true;
-                }
-                i++;
-                j++;
-            }
-        }
-
+//        if (str == null || pattern == null) {
+//            return false;
+//        }
+//        int i = 0;
+//        int j = 0;
+//
+//        while (i < str.length && j < pattern.length) {
+//            if (str[i] == pattern[j]) {
+//                i++;
+//                if () {
+//
+//                }
+//            } else if (pattern[j] == '.') {
+//                //如果是.*的组合 直接返回true
+//                if (j + 1 < pattern.length && pattern[j + 1] == '*') {
+//                    return true;
+//                }
+//                i++;
+//                j++;
+//            }
+//        }
+        return false;
     }
 }
