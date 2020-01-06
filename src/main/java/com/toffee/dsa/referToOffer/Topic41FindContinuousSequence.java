@@ -23,24 +23,21 @@ public class Topic41FindContinuousSequence {
         //找到第一个序列的最小值和最大值
         int left = 1;
         int right = 2;
-        for (; right < sum; ) {
-            if (right * (right  + 1) >> 2 >= sum) {
-                break;
-            }
-        }
 
         //如果当前连续序列和不等于sum 继续遍历
-        while (left < right - 1 && right < sum) {
-            //如果当前序列和大于sum  则left右移
-            while(((right - left + 1) * (right + left)) >> 2 > sum) {
-                left++;
+        while (left < right && right < sum) {
+
+            //如果当前序列和小于sum 则right右移
+            while (right < sum && ((right - left + 1) * (right + left)) >> 1 < sum) {
+                right++;
             }
 
             //如果当前序列和等于sum保存到当前序列
-            if (((right - left + 1) * (right + left)) >> 2 == sum) {
+            if (((right - left + 1) * (right + left)) >> 1 == sum) {
                 ArrayList<Integer> sequenceList = new ArrayList<>();
-                for (; left <= right; left++) {
-                    sequenceList.add(left);
+                int leftTemp = left;
+                for (; leftTemp <= right; leftTemp++) {
+                    sequenceList.add(leftTemp);
                 }
                 resultList.add(sequenceList);
 
@@ -48,9 +45,9 @@ public class Topic41FindContinuousSequence {
                 left++;
             }
 
-            //如果当前序列和小于sum 则right右移
-            while (((right - left + 1) * (right + left)) >> 2 < sum) {
-                right++;
+            //如果当前序列和大于sum  则left右移
+            while(left < right && ((right - left + 1) * (right + left)) >> 1 > sum) {
+                left++;
             }
         }
         return resultList;

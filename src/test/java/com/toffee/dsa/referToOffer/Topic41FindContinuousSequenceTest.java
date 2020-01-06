@@ -34,7 +34,7 @@ public class Topic41FindContinuousSequenceTest {
     public void testFindContinuousSequence() throws Exception { 
         //TODO: Test goes here... 
         Topic41FindContinuousSequence test = new Topic41FindContinuousSequence();
-        ArrayList<ArrayList<Integer>> resultList = test.findContinuousSequence(3);
+        ArrayList<ArrayList<Integer>> resultList = test.findContinuousSequence(9);
         resultList.toString();
     } 
 
