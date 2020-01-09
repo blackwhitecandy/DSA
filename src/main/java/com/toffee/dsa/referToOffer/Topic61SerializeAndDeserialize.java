@@ -1,6 +1,6 @@
 package com.toffee.dsa.referToOffer;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * @Author: glz
@@ -15,18 +15,74 @@ import java.util.ArrayList;
  * @Date: Create in 2020/1/6
  */
 public class Topic61SerializeAndDeserialize {
-    public String Serialize(TreeNode root) {
+    /**
+     * 前序遍历
+     * @param root
+     * @return
+     */
+    public String serialize(TreeNode root) {
         if (root == null) {
-            return "";
+            return "#!";
         }
-        
-        String result = "";
-        ArrayList<TreeNode> nodeArrayList = new ArrayList<>();
-
-        return result;
+        return root.val + "!" + serialize(root.left) + serialize(root.right);
     }
 
-    public TreeNode Deserialize(String str) {
+    public TreeNode deserialize1(String str) {
+        if (str == null || str.isEmpty()) {
+            return null;
+        }
+        String[] values = str.split("!");
+        return makeTree1(values, true);
+    }
 
+    /**
+     *
+     * @param values
+     * @param defaultLocation 是否默认取第一个元素 true是  false根据第一个元素的值来取指定下标的元素
+     * @return
+     */
+    private TreeNode makeTree1(String[] values, boolean defaultLocation) {
+        String value = values[0];
+        if (defaultLocation) {
+            //如果是默认取第一个元素则把存储的下标改为1
+            values[0] = "1";
+        } else  {
+            //如果数组下标越界  结束递归
+            if (Integer.valueOf(value) >= values.length) {
+                return null;
+            }
+            int intValue = Integer.valueOf(value);
+            //根据存储的下标取值
+            value = values[intValue];
+            values[0] = String.valueOf(intValue + 1);
+        }
+
+        if (value.equals("#")) {
+            return null;
+        }
+        TreeNode root = new TreeNode(Integer.valueOf(value));
+        root.left = makeTree1(values, false);
+        root.right = makeTree1(values, false);
+        return root;
+    }
+
+    public TreeNode deserialize(String str) {
+        if (str == null || str.isEmpty()) {
+            return null;
+        }
+        PriorityQueue<String> strValueQueue = new PriorityQueue<>();
+        Collections.addAll(strValueQueue, str.split("!"));
+        return makeTree(strValueQueue);
+    }
+
+    private TreeNode makeTree(Queue<String> strValueQueue) {
+        String value = strValueQueue.poll();
+        if (value.equals("#")) {
+            return null;
+        }
+        TreeNode root = new TreeNode(Integer.valueOf(value));
+        root.left = makeTree(strValueQueue);
+        root.right = makeTree(strValueQueue);
+        return root;
     }
 }
